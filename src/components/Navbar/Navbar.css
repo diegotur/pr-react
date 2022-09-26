@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+
+.Navbar{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 18vh;
+}
+.logo{
+    margin-left: 7vh;
+    margin-top: -1.5vh;
+    height: 170%;
+    width: 40%;
+    transform: rotate(130deg);
+}
+.Navbar h1{
+    font-size: 20px;
+    display: flex;
+    justify-items: flex-start;
+    font-family: 'Stalinist One', cursive;
+    margin-left: 1vh;
+
+}
+.contLeft{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 18vh;
+}
+.divButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: antiquewhite;
+}
