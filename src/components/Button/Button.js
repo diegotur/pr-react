@@ -1,13 +1,13 @@
 import './Button.css'
 
-const Button = ({label}) => {
-
+const Button = ({children, style}) => {
    
     return (
-        <button className='Button'>
-           {label}
+        <button className='Button'
+        style={style}
+        >
+           {children}
         </button>
     )
 }
-
 export default Button
