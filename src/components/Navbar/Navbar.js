@@ -4,12 +4,12 @@ import CartWidget from '../CartWidget/CartWidget'
 const Navbar = () => {
     return (
         <nav>
-            <h1>Ecommerce</h1>
+            <h1>BOX FACTORY</h1>
             <div>
                 <button>Celulares</button>
             </div>
-            <CartWidget />
-        </nav>
+            {<CartWidget />
+}        </nav>
     )
 }
 
