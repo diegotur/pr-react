@@ -1,26 +1,13 @@
 import './Button.css'
 
-const Button = ({ children = 'boton', style, handleOnClick }) => {
-
-    const estilosColorFondo = {
-        ...style,
-        backgroundColor: children === 'Aceptar' 
-                            ? 'green' 
-                            : children === 'Cancelar'
-                                ? 'red'
-                                : undefined 
-        
-    }
-
+const Button = ({children, style}) => {
+   
     return (
-        <button 
-            className='Button'
-            style={estilosColorFondo}
-            onClick={() => handleOnClick(children)}
+        <button className='Button'
+        style={style}
         >
-            {children}
+           {children}
         </button>
     )
 }
-
 export default Button
