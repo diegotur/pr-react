@@ -1,16 +1,13 @@
-.Button {
+.Button2 {
     background-color: antiquewhite;
     color: none;
     border: none;
     text-decoration: none;
-    height: 80%;
-    width: 80%;
     cursor: pointer;
-    background-image: url("./assets/cajachica.png");
-
+    background-image: url("./assets/cajagrande.png");
     background-repeat:round;
+    border: red solid;
     color: rgba(0, 0, 0, 0.404);
+    height: 100%;
+    width: 100%;
 }
-
-
-

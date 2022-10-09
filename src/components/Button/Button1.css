@@ -1,16 +1,10 @@
-.Button {
+.Button1 {
     background-color: antiquewhite;
     color: none;
     border: none;
     text-decoration: none;
-    height: 80%;
-    width: 80%;
     cursor: pointer;
-    background-image: url("./assets/cajachica.png");
-
+    background-image: url("./assets/cajamediana.png");
     background-repeat:round;
     color: rgba(0, 0, 0, 0.404);
 }
-
-
-

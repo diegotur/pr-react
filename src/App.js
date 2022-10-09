@@ -2,8 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
-import Effect from './components/Effect/Effect';
-import { GetProducts } from './AsyncMock';
+//import { GetProducts } from './AsyncMock';
 
 
 
@@ -20,8 +19,6 @@ function App() {
       <ItemListContainer greeting = {'BIENVENIDOS'}/>
 
       <ItemCount onAdd={handleOnAdd}/>
-
-      <Effect/>
 
     </div>
   );
