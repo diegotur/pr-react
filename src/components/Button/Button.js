@@ -1,9 +1,13 @@
 import './Button.css'
 
-const Button = ({style}) => {
+const Button = ({children, style}) => {
+   
     return (
-        <button className="Button" style={style}/>
+        <button className='Button'
+        style={style}
+        >
+           {children}
+        </button>
     )
 }
-
 export default Button

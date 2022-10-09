@@ -1,16 +1,17 @@
 #cartImg{
-    height: 8   wsd 0%;
+    height: 80%;
     width: 80%;
     margin-left: 15vh;
     transform: rotate(-10deg);
 }
 #cartNumber{
-    font-size: 7vh;
+    font-size: 5vh;
 }
 #carrito{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 18vh;
+    column-gap: 10%;
+    height: 25vh;
     justify-items:stretch;
     align-items: center;
 }

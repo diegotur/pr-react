@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
-//import { GetProducts } from './AsyncMock';
+import { GetProducts } from './AsyncMock';
 
 
 

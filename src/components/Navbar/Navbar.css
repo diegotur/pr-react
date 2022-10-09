@@ -3,9 +3,8 @@
 .Navbar{
     background-color: antiquewhite;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 25vh;
 }
 .logo{
     height: 60%;
@@ -14,8 +13,9 @@
 .contLeft{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    height: 18vh;
+    height: 25vh;
     justify-items: center;
+    align-items: center;
 }
 #boxFactory{
     position: absolute;
@@ -23,4 +23,20 @@
     font-family: 'Stalinist One', cursive;
     margin-top: 6%;
 }
-
+.divButtons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: antiquewhite;
+}
+#btnC{
+    height: 80%;
+    width: 80%;
+}
+#btnM{
+    height: 80%;
+    width: 80%;
+}
+#btnG{
+    height: 80%;
+    width: 80%;
+}
