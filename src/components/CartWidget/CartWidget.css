@@ -1,6 +1,7 @@
 #cartImg{
     height: 80%;
     width: 100%;
+    margin-left: 0.5vw;
     transform: rotate(-10deg);
 }
 #cartNumber{
@@ -12,7 +13,7 @@
     height: 14vh;
     justify-items:space;
     align-items: center;
-    background-color: rgba(246, 218, 182);
+    background-color: rgb(255, 255, 255);
     border-radius: 100%;
     height: 70%;
     width: 70%;

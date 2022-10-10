@@ -1,0 +1,51 @@
+.Controls{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.ButtonC{
+    background-color: black;
+    color:white;
+    border-radius: 80%;
+    font-family: fantasy;
+    border: ridge rgba(0, 0, 0, 0.441);
+    font-size: 2vw;
+    padding: 1vh 2vh;
+    cursor: pointer;
+
+    
+}
+.Number{
+    font-size: 2vw;
+}
+.ButtonA{
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.747);
+    filter: drop-shadow(2px 2px 1px rgb(25, 5, 5));
+    font-family: fantasy;
+    border: ridge rgba(0, 0, 0, 0.641);
+    letter-spacing: 0.3vh;
+    font-size: 1.5vw;
+    cursor: pointer;
+
+}
+.ButtonV{
+    background-color: transparent;
+    color: rgba(18, 3, 3, 0.906);
+    font-family: fantasy;
+    font-size: 2.5vw;
+    letter-spacing: 0.3vh;
+    justify-self: end;
+    position: relative;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.GridButtons{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15vh;
+}

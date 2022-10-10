@@ -1,3 +1,6 @@
 .ItemListContainer{
     font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
