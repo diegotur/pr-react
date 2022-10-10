@@ -1,0 +1,14 @@
+.ItemDetailContainer{
+    border: solid 10px white;
+}
+.ItemDetailContainer::before {    
+    content: "";
+    background-image: url("https://i.blogs.es/28d521/the-last-of-us-remastered-review_8pkg.1280/1366_521.jpeg");
+    background-size: cover;
+    position: absolute;
+    top: 14vh;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.55;
+}
