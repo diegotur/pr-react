@@ -33,9 +33,10 @@
     filter: drop-shadow(0px 0px 15px rgba(21, 1, 1, 0.947));
 }
 .CardInfo{
+    margin-top: -4vh;
     background-color: rgba(0, 0, 0, 0.213);
-    height: 60vh;
-    margin-top: -5vh;
+    height: 68vh;    
+    
 }
 .ItemBG {    
     position: absolute;
@@ -43,7 +44,7 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.55;
+    opacity: 0.85;
     z-index: -1;
     height: 82vh;
     width: 100%;
@@ -68,7 +69,7 @@
 .ItemFooterInfo{
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     padding-top: 10vh;
     height: 30vw;
 }

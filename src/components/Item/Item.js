@@ -10,7 +10,7 @@ const Item = ({id, name, img, price})=>{
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImgList"/>
+            <Link to={`/detail/${id}`}><img src={img} alt={name} className="ItemImgList"/></Link>
             </picture>
             <section>
                 <p className="InfoList">
