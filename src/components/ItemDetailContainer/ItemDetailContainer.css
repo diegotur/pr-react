@@ -1,8 +1,8 @@
 .ItemDetailContainer{
     overflow: hidden;
 }
-/* .DotSpinner{
-    border: red solid;
-    position: absolute;
-    margin-left: 40vh;
-} */
+.DotSpinner{
+    display: grid;
+    justify-items: center;
+    margin-top:15%;
+}

@@ -27,7 +27,7 @@ const products = [
     name: "Uncharted 4",
     price: 3000,
     category: "PS4",
-    img:"https://http2.mlstatic.com/D_NQ_NP_982499-MLA46104402669_052021-O.jpg",
+    img:"https://sm.ign.com/t/ign_de/game/u/uncharted-/uncharted-ps4_hh5s.1200.png",
     background:"https://www.gamersglobal.de/sites/gamersglobal.de/files/test/teaser/2448/Uncharted4_grafik_2.jpg", 
     stock: 12,
     description: "Uncharted 4 es un videojuego de acción-aventura en tercera persona, distribuido por Sony Computer Entertainment y desarrollado por Naughty Dog exclusivamente para PlayStation 4.​ Es la cuarta entrega de la serie Uncharted. Cronológicamente el juego toma lugar alrededor del año 2014, entre tres y cinco años después de Uncharted 3."},
@@ -51,7 +51,7 @@ const products = [
     name: "God Of War 4",
     price: 3500,
     category: "PS4",
-    img:"https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7",
+    img:"https://tse2.mm.bing.net/th/id/OIP.SRyefcZNk0umn8Bq4PenrwAAAA?pid=ImgDet&w=460&h=573&rs=1",
     background:"https://th.bing.com/th/id/R.9b932187cf0ebf8a4c1761d67a109ac5?rik=sFkbUpxqWpfL0Q&pid=ImgRaw&r=0", 
     stock: 8,
     description: "Han pasado años desde que Kratos tomó su venganza contra los Dioses Olímpicos. Habiendo sobrevivido la pelea final contra su padre Zeus, Kratos vive ahora con su joven hijo Atreus en el mundo de los Dioses Nórdicos, una tierra hostil habitada por feroces monstruos y guerreros. Kratos deberá actuar como mentor y protector de su hijo."},
@@ -67,7 +67,7 @@ const products = [
     name: "Forbidden West",
     price: 2800,
     category: "PS4",
-    img:"https://image.api.playstation.com/vulcan/ap/rnd/202107/3100/HO8vkO9pfXhwbHi5WHECQJdN.png",
+    img:"https://cdn.sancta-domenica.hr/media/gaussdev/bannerslider/banner/image/p/s/ps-202108-18253-horizon_fw_preorder-sancta_domenica-600x829.png",
     background:"https://cloudfront-us-east-1.images.arcpublishing.com/infobae/76A3WWNPWRBABKGCF5LA37UKIY.jpg", 
     stock: 9,
     description: "Horizon Forbidden West es un videojuego de rol de acción, y mundo abierto desarrollado por Guerrilla Games y distribuido por Sony, exclusivamente para PlayStation 4 y PlayStation 5. El juego está protagonizado por Aloy, una joven cazadora que viaja al Oeste Prohibido para investigar una misteriosa y mortífera plaga mientras hace frente a otros peligros."},
@@ -82,7 +82,7 @@ const products = [
     {id: '11',
     name: "The Last Of Us 2",
     price: 3500,
-    category: "XBOX",
+    category: "PS4",
     img:"https://media.vandal.net/m/44223/the-last-of-us-part-ii-20199271734386_1.jpg",
     background:"https://i.blogs.es/89a028/the-last-of-us-parte-ii/1366_2000.jpeg", 
     stock: 7,
@@ -102,7 +102,7 @@ export const getProducts = () => {
     return new Promise ((resolve)=>{
         setTimeout(()=>{
             resolve(products);
-        },1000)
+        },800)
 
     })
 }
@@ -112,7 +112,7 @@ export const getProductById = (id) => {
             resolve(products.find(prod => {
                 return prod.id === id
             }))
-        }, 2000)
+        }, 800)
     })
 }
 export const getProductsByCategory = (categoryId) =>{
@@ -120,7 +120,7 @@ export const getProductsByCategory = (categoryId) =>{
         setTimeout(()=>{
             resolve(products.filter(prod => prod.category === categoryId)) 
                 
-    },1000)
+    },800)
 
     })
 }

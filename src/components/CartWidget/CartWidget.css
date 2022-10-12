@@ -2,10 +2,10 @@
     height: 80%;
     width: 100%;
     margin-left: 0.5vw;
-    transform: rotate(-10deg);
+    
 }
 #cartNumber{
-    font-size: 5vh;
+    font-size: 4vh;
 }
 #carrito{
     display: grid;
@@ -13,10 +13,10 @@
     height: 14vh;
     justify-items:space;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 100%;
-    height: 70%;
-    width: 70%;
-    margin-top: 10%;
+    background-color: rgba(246, 201, 143, 0.87);
+    border-radius: 20%;
+    height: 50%;
+    width: 50%;
+    margin-top: 14%;
 
 }

@@ -27,14 +27,12 @@ const ItemListContainer = () => {
 
 
     if(loading) {
-        return <DotSpinner
+        return <div className="DotSpinner"><DotSpinner
         size={80}
         speed={0.9} 
         color="black" 
-       />
+       /></div>
     }
-
-    
     return (
         <div className='ItemListContainer'>
             <ItemList products={products} />

@@ -5,9 +5,6 @@ import { getProductById } from "../../asyncMock";
 import { useParams } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
 
-
-
-
 const ItemDetailContainer = ()=>{
     const [products, setProduct] = useState()
     const [loading, setLoading] = useState(true)
