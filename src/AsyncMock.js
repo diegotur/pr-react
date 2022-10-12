@@ -82,7 +82,7 @@ const products = [
     {id: '11',
     name: "The Last Of Us 2",
     price: 3500,
-    category: "PS4",
+    category: "XBOX",
     img:"https://media.vandal.net/m/44223/the-last-of-us-part-ii-20199271734386_1.jpg",
     background:"https://i.blogs.es/89a028/the-last-of-us-parte-ii/1366_2000.jpeg", 
     stock: 7,
@@ -112,7 +112,7 @@ export const getProductById = (id) => {
             resolve(products.find(prod => {
                 return prod.id === id
             }))
-        }, 500)
+        }, 2000)
     })
 }
 export const getProductsByCategory = (categoryId) =>{

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { getProductById } from "../../asyncMock";
 import { useParams } from "react-router-dom"
+import { DotSpinner } from '@uiball/loaders'
+
 
 
 
@@ -11,6 +13,7 @@ const ItemDetailContainer = ()=>{
     const [loading, setLoading] = useState(true)
 
     const { productId } = useParams()
+
 
     useEffect(()=>{
         getProductById(productId).then(response =>{
@@ -22,7 +25,11 @@ const ItemDetailContainer = ()=>{
     },[productId])
 
     if (loading) {
-        return <h1>Cargando..</h1>
+        return <div className="DotSpinner"><DotSpinner
+        size={80}
+        speed={0.9} 
+        color="black" 
+       /></div>
     }
 
     return(
