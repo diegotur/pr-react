@@ -1,6 +1,6 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
-import { getProducts, getProductsByCategory } from "../../asyncMock"
+import { getProducts, getProductsByCategory } from "../../AsyncMock"
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { DotSpinner } from '@uiball/loaders'

@@ -1,12 +1,13 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({ id, name, img, category, background, description, price, stock }) => {
+const ItemDetail = ({ id, name, img, category, background, description, price, stock, setCart }) => {
     const handleOnAdd = (quantity) => {
         const productToAdd = {
             id, name, price, quantity
         }
-        console.log(productToAdd)
+        setCart(productToAdd)
+        
     }
 
     return (

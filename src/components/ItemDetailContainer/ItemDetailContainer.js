@@ -1,11 +1,11 @@
 import "./ItemDetailContainer.css"
 import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { getProductById } from "../../asyncMock";
+import { getProductById } from "../../AsyncMock";
 import { useParams } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
 
-const ItemDetailContainer = ()=>{
+const ItemDetailContainer = ({setCart})=>{
     const [products, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
@@ -31,7 +31,7 @@ const ItemDetailContainer = ()=>{
 
     return(
         <div className="ItemDetailContainer">
-            <ItemDetail {...products}/>
+            <ItemDetail {...products } setCart={setCart}/>
 
         </div>
     )
