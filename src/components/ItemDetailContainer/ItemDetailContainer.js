@@ -1,11 +1,15 @@
 import "./ItemDetailContainer.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { getProductById } from "../../AsyncMock";
+//import { getProductById } from "../../AsyncMock";
 import { useParams } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
+import { getDoc, doc } from "firebase/firestore"
+import { db } from "../../services/firebase"
+
 
 const ItemDetailContainer = ({setCart})=>{
+
     const [products, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
@@ -13,12 +17,22 @@ const ItemDetailContainer = ({setCart})=>{
 
 
     useEffect(()=>{
-        getProductById(productId).then(response =>{
-            setProduct(response)
-            console.log(response)
+
+        const docRef = doc(db, 'products', productId)
+
+        getDoc(docRef).then(response =>{
+            const data = response.data()
+            const productAdapted = ({id:response.id, ...data})
+            setProduct(productAdapted)
+
         }).finally(()=>{
             setLoading(false)
     })
+        /* getProductById(productId).then(response =>{
+            setProduct(response)
+        }).finally(()=>{
+            setLoading(false)
+    }) */
     },[productId])
 
     if (loading) {
@@ -26,12 +40,12 @@ const ItemDetailContainer = ({setCart})=>{
         size={80}
         speed={0.9} 
         color="black" 
-       /></div>
+    /></div>
     }
 
     return(
         <div className="ItemDetailContainer">
-            <ItemDetail {...products } setCart={setCart}/>
+            <ItemDetail {...products } />
 
         </div>
     )
