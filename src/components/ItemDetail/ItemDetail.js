@@ -6,7 +6,7 @@ import { CartContext } from '../../CartContext/cartContext'
 
 const ItemDetail = ({ id, name, img, category, background, description, price, stock }) => {
     
-    const {addItem } = useContext(CartContext)
+    const {addItem, getProductQuantity } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         const productToAdd = {
@@ -14,6 +14,10 @@ const ItemDetail = ({ id, name, img, category, background, description, price, s
         }
         addItem(productToAdd)
     }
+
+    
+
+const quantityAdded = getProductQuantity(id)
 
     return (
         <article className="Card">
@@ -45,7 +49,7 @@ const ItemDetail = ({ id, name, img, category, background, description, price, s
                         </section>           
                     </div>
                     <footer className='ItemFooterInfo'>
-                    <ItemCount onAdd={handleOnAdd} stock={stock} category={category}/>
+                    <ItemCount onAdd={handleOnAdd} stock={stock} initial={quantityAdded} category={category}/>
                     </footer>   
                 </div> 
         </div> 

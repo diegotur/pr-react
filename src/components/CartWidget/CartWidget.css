@@ -1,22 +1,37 @@
 #cartImg{
-    height: 80%;
+    height: 100%;
     width: 100%;
     margin-left: 0.5vw;
     
 }
 #cartNumber{
     font-size: 4vh;
+    background-color: black;
+    border-radius: 50%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    color: white;
 }
-#carrito{
+#cartTotalPrice{
+    font-size: 2.5vh;
+    color: black;
+}
+#linkCarrito{
+    text-decoration: none;
+    color: black;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 14vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    height: 8vh;
     justify-items:space;
     align-items: center;
     background-color: rgba(246, 201, 143, 0.87);
-    border-radius: 20%;
-    height: 50%;
-    width: 50%;
-    margin-top: 14%;
-
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    width: 100%;
+    margin-top: 8%;
 }
+
