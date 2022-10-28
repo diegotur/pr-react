@@ -1,11 +1,11 @@
 import './App.css';
-import { CartProvider } from './CartContext/cartContext';
+import { CartProvider } from './CartContext/CartContext';
 import Navbar from './components/Navbar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Cart from './components/Cart/Cart';
-import Checkout from './Checkout/Checkout';
+import Checkout from './components/CheckOut/CheckOut';
 /* import Contact from './Contact/Contact' */
 
 

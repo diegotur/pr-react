@@ -1,20 +1,20 @@
 import { useState, useContext } from "react"
-import { CartContext } from "../CartContext/cartContext"
+import { CartContext } from "../../CartContext/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
-import { db } from "../services/firebase"
-import {FormCheckOut} from '../FormCheckOut/FormCheckOut'
+import { db } from "../../services/firebase"
+/* import {FormCheckOut} from '../../FormCheckOut/FormCheckOut' */
 import { useNavigate } from "react-router-dom"
 
-const Checkout=()=>{
+const CheckOut=()=>{
     const {cart, total, clearCart} = useContext(CartContext)
 
-    const {loading, setLoading} = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const navigate = useNavigate ()
 
     const CreateOrder= async ()=>{
-       
-        setLoading (true)
+
+        setLoading(true)
 
         try{
 
@@ -27,14 +27,7 @@ const Checkout=()=>{
                 items: cart,
                 total
             }
-    const collectionRef = collection(db, 'orders');
-    
-    addDoc(collectionRef, objOrder).then(response =>{
-        console.log(response.id)
-    }).catch(error=>{
-        console.log(error)
-    })
-    
+            
     const batch = writeBatch(db)
 
     const outOfStock = []
@@ -92,10 +85,10 @@ if (loading){
 return (
     <div>
         <h1>CheckOut</h1>
-        <FormCheckOut/>
+        {/* <FormCheckOut/> */}
         <button onClick={CreateOrder}>Generar Orden</button>
     </div>
 )
 }
-export default Checkout
+export default CheckOut
 

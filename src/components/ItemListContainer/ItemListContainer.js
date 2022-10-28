@@ -1,6 +1,5 @@
 import './ItemListContainer.css'
 import { useState, useEffect } from 'react'
-//import { getProducts, getProductsByCategory } from "../../AsyncMock"
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import { DotSpinner } from '@uiball/loaders'
@@ -25,9 +24,6 @@ const ItemListContainer = () => {
                 const data = doc.data()
                 return {id: doc.id, ...data }
             })
-            console.log(productsAdapted)
-
-
             setProducts(productsAdapted)
             
         }).catch(error => {
@@ -43,7 +39,7 @@ const ItemListContainer = () => {
         size={80}
         speed={0.9} 
         color="black" 
-       /></div>
+        /></div>
     }
     return (
         <div className='ItemListContainer'>

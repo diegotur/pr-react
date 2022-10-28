@@ -1,29 +1,24 @@
 import './ItemCount.css'
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-import { useNavigate } from 'react-router-dom'
-
 
 
 const ItemCount = ({category, stock = 0, initial = 1, onAdd})=> {
     
-    
-    
     const [quantity, setQuantity] = useState(initial)
 
-const increment = () => {
-    if(quantity < stock) {
-        setQuantity(quantity + 1)
+    const increment = () => {
+        if(quantity < stock) {
+            setQuantity(quantity + 1)
+        }
     }
-}
 
-const decrement = () => {
-    if(quantity > 1) {
-        setQuantity(quantity - 1)
-    }     
-}
+    const decrement = () => {
+        if(quantity > 1) {
+            setQuantity(quantity - 1)
+        }     
+    }
 
-const navigate = useNavigate();
 
 return(
     <div className='Counter'>          
@@ -34,7 +29,7 @@ return(
             </div>
             <div className='GridButtons'>
                 <button className="ButtonA" onClick={() => onAdd(quantity)}>AGREGAR AL CARRITO</button>
-                <Link to={navigate(-1)} className="ButtonV">VOLVER</Link>
+                <Link to={`/category/${category}`} className="ButtonV">VOLVER</Link>
             </div>
     </div>
 )

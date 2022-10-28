@@ -1,7 +1,6 @@
 import "./ItemDetailContainer.css"
 import { useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-//import { getProductById } from "../../AsyncMock";
 import { useParams } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
 import { getDoc, doc } from "firebase/firestore"
@@ -47,8 +46,6 @@ const ItemDetailContainer = ({setCart})=>{
     return(
         <div className="ItemDetailContainer">
             <ItemDetail {...products } />
-            
-
         </div>
     )
 }
