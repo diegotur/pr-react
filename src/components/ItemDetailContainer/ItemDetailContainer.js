@@ -8,12 +8,13 @@ import { getDoc, doc } from "firebase/firestore"
 import { db } from "../../services/firebase"
 
 
+
 const ItemDetailContainer = ({setCart})=>{
 
     const [products, setProduct] = useState()
     const [loading, setLoading] = useState(true)
-
     const { productId } = useParams()
+   
 
 
     useEffect(()=>{
@@ -46,6 +47,7 @@ const ItemDetailContainer = ({setCart})=>{
     return(
         <div className="ItemDetailContainer">
             <ItemDetail {...products } />
+            
 
         </div>
     )
