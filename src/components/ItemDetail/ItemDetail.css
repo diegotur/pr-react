@@ -73,3 +73,14 @@
     padding-top: 10vh;
     height: 30vw;
 }
+.ButtonA{
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.747);
+    filter: drop-shadow(2px 2px 1px rgb(25, 5, 5));
+    font-family: fantasy;
+    border: ridge rgba(0, 0, 0, 0.641);
+    letter-spacing: 0.3vh;
+    font-size: 1.5vw;
+    cursor: pointer;
+
+}

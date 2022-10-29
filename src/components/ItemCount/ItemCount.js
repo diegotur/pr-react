@@ -29,6 +29,7 @@ return(
             </div>
             <div className='GridButtons'>
                 <button className="ButtonA" onClick={() => onAdd(quantity)}>AGREGAR AL CARRITO</button>
+                
                 <Link to={`/category/${category}`} className="ButtonV">VOLVER</Link>
             </div>
     </div>
