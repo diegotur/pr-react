@@ -19,3 +19,19 @@
 }.total{
     padding-left: 10vw;
 }
+.confirmBtn{
+    background: green;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: rgba(60, 111, 60, 0.635) 2px solid;
+    border-radius: 3%;
+    cursor: pointer;
+    font-size: 4vh;
+    padding: 3vh;
+   
+
+    
+}
+.divLink{
+    margin-top: 10vh;
+}

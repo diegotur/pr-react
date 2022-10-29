@@ -15,7 +15,7 @@ const CartItem = ({ id, name, img, quantity, price }) => {
             <header className="HeaderCartItem">
                 <h2 className="ItemHeaderCartItem">
                     {name}
-                    {<img src={img}></img>}
+                    {<img className="ImgCartItem" src={img} alt={name}></img>}
                 </h2>
             </header>
             <section className='ContainerItemCartItem'>

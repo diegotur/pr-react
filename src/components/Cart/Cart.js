@@ -21,7 +21,9 @@ return (
         <h1 className='total'>Total: ${total}</h1>
         <button onClick={() => clearCart()} className="vaciarCarritoBtn">VACIAR CARRITO</button>
         </div>
-        <Link to='/checkout' className='Option'>Checkout</Link>
+        <div className='divLink'>
+        <Link to='/checkout' className='confirmBtn'>Confirmar Compra</Link>
+        </div>
     </div>
 )
 }

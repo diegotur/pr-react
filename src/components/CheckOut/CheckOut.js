@@ -1,14 +1,19 @@
+import './CheckOut.css'
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
-import FormCheckOut from '../../FormCheckOut/FormCheckOut'
 import { useNavigate } from "react-router-dom"
 
 const CheckOut=()=>{
     const {cart, total, clearCart} = useContext(CartContext)
 
     const [loading, setLoading] = useState(false)
+
+    const [name, setName] = useState("");
+    const [address, setAddress] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
 
     const navigate = useNavigate ()
 
@@ -20,9 +25,10 @@ const CheckOut=()=>{
 
             const objOrder = {
                 buyer: {
-                    name:"",
-                    phone:"",
-                    mail:""
+                    name: {name},
+                    address: {address},
+                    phone: {phone},
+                    mail: {email}   
                 },
                 items: cart,
                 total
@@ -85,7 +91,20 @@ if (loading){
 return (
     <div>
         <h1>CONFIRMÁ TU COMPRA</h1>
-        <FormCheckOut/>
+        <form>
+            <div className='divLabel'>
+                <input className="inputs" type="text" name="Nombre" placeholder="Nombre y Apellido" value={name}onChange={(e) => setName(e.target.value)}></input> 
+            </div>
+            <div className='divLabel'>
+                <input className="inputs" type="email" name="mail" placeholder="Dirección" value={address}onChange={(e) => setAddress(e.target.value)}></input>
+            </div>
+            <div className='divLabel'>
+                <input className="inputs" type="tel" name="Telefono" placeholder="Teléfono" value={phone}onChange={(e) => setPhone(e.target.value)}></input>
+            </div>    
+            <div className='divLabel'>
+                <input className="inputs" type="email" name="mail" placeholder="E-mail" value={email}onChange={(e) => setEmail(e.target.value)}></input>
+            </div>
+        </form>
         <button className="comprarBtn" onClick={CreateOrder}>CONFIRMAR COMPRA</button>
     </div>
 )

@@ -6,13 +6,13 @@
     padding: 5px;
     margin: 20px;
     font-size: 2vh;
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.386);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
 }
 
 .InfoCartItem {
-    margin-right: 50px;
+    margin-right: 100px;
 }
 
 .ContainerItemCartItem {
@@ -21,7 +21,8 @@
 }
 .HeaderCartItem{
     display: grid;
-    justify-content: left;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
 }
 
 .ItemHeaderCartItem {
@@ -33,6 +34,13 @@
     font-size: 2.3vh;
     display: flex;
     justify-content: space-between;
+}
+.ImgCartItem{
+    height: 9vh;
+    width: 4vw;
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: -2.5vh;
 }
 
 .ButtonCartItem {
