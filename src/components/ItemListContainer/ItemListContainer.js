@@ -5,10 +5,13 @@ import { useParams } from 'react-router-dom'
 import { DotSpinner } from '@uiball/loaders'
 import { db } from '../../services/firebase'
 import { getDocs, collection, query, where } from 'firebase/firestore'
+import { useAsync } from '../../Hooks/useAsync'
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(true)
+
+    const getProductsFromFirestore = ()=> getProducts(categoryId)
+   
+    const {data: products, error, loading} = useAsync(getProductsFromFirestore, [categoryId])
 
     const { categoryId } = useParams()
 
@@ -33,6 +36,9 @@ const ItemListContainer = () => {
         })  
     }, [categoryId])
 
+    if (error){
+        <h1>Hubo Un error</h1>
+    }
 
     if(loading) {
         return <div className="DotSpinner"><DotSpinner
