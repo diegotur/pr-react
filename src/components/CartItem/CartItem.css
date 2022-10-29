@@ -1,11 +1,12 @@
 .CardCartItem {
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    padding: 20px;
-    margin: 30px;
-    font-size: 10px;
-    background-color: papayawhip;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 20px;
+    font-size: 2vh;
+    background-color: antiquewhite;
     border: 1px solid #e1e1e1;
     border-radius: 10px;
 }
@@ -18,6 +19,10 @@
     display: flex;
     justify-content: space-between;
 }
+.HeaderCartItem{
+    display: grid;
+    justify-content: left;
+}
 
 .ItemHeaderCartItem {
     display: flex;
@@ -25,32 +30,28 @@
 }
 
 .InfoCartItem {
-    font-size: 12px;
+    font-size: 2.3vh;
     display: flex;
     justify-content: space-between;
 }
 
 .ButtonCartItem {
     width: auto;
-    padding: 12px;
-    font-size: 8px;
-    background: #8C30F5;
+    height: 60%;
+    background: black;
     border-radius: 8px;
-    flex: none;
-    display: flex;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: #FFFFFF;
-    border: none;
-    border-style: none;
     cursor: pointer;
-    outline: inherit;
+    font-size: 2.3vh;
+    margin-right: 1vh;
+    margin-top: 2vh;
 }
 
 .ItemFooterCartItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: right;
 }

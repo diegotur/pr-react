@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../CartContext/CartContext' 
 
 
-const CartItem = ({ id, name, quantity, price }) => {
+const CartItem = ({ id, name, img, quantity, price }) => {
     const { removeItem } = useContext(CartContext)
 
     const handleRemove = (id) => {
@@ -15,6 +15,7 @@ const CartItem = ({ id, name, quantity, price }) => {
             <header className="HeaderCartItem">
                 <h2 className="ItemHeaderCartItem">
                     {name}
+                    {<img src={img}></img>}
                 </h2>
             </header>
             <section className='ContainerItemCartItem'>
@@ -29,7 +30,7 @@ const CartItem = ({ id, name, quantity, price }) => {
                 <p className="InfoCartItem">
                     Subtotal: ${price * quantity}
                 </p>
-                <button className='ButtonCartItem' onClick={() => handleRemove(id)}>X</button>
+                <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Quitar</button>
             </footer>
         </article>
     )

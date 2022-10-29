@@ -18,6 +18,7 @@ const ItemDetail = ({ id, name, img, category, background, description, price, s
             id, name, price, quantity
         }
         addItem(productToAdd)
+
     }
 
     
@@ -54,8 +55,9 @@ const quantityAdded = getProductQuantity(id)
                         </section>           
                     </div>
                     <footer className='ItemFooterInfo'>
-                    {stock !==0 ? <ItemCount onAdd={handleOnAdd} stock={stock} initial={quantityAdded} category={category}/>:<h2>No hay Stock</h2>}
-                    {isInCart(id) && <Link to= '/cart' className= 'ButtonA'>Finalizar Compra</Link>}
+                    {stock !==0 ? <ItemCount onAdd={handleOnAdd} stock={stock} initial={quantityAdded} category={category}/>
+                    :<h2 className='stock'>SIN STOCK</h2>}
+                    {isInCart(id) && <Link to= '/cart' className= 'ButtonF'>FINALIZAR COMPRA</Link>}
                     
                     </footer>   
                 </div> 

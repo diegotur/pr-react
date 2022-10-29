@@ -28,7 +28,8 @@ return(
                 <button className="ButtonC" onClick={increment}>+</button>
             </div>
             <div className='GridButtons'>
-                <button className="ButtonA" onClick={() => onAdd(quantity)}>AGREGAR AL CARRITO</button>
+                <button className="ButtonA" onClick={() => 
+                    onAdd(quantity)} >AGREGAR AL CARRITO</button>
                 
                 <Link to={`/category/${category}`} className="ButtonV">VOLVER</Link>
             </div>

@@ -2,7 +2,7 @@ import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
-/* import {FormCheckOut} from '../../FormCheckOut/FormCheckOut' */
+import FormCheckOut from '../../FormCheckOut/FormCheckOut'
 import { useNavigate } from "react-router-dom"
 
 const CheckOut=()=>{
@@ -79,14 +79,14 @@ const CheckOut=()=>{
 }
 
 if (loading){
-    return <h1>Se Está generando su orden</h1>
+    return <h1>Se está generando su orden</h1>
 }
 
 return (
     <div>
-        <h1>CheckOut</h1>
-        {/* <FormCheckOut/> */}
-        <button onClick={CreateOrder}>Generar Orden</button>
+        <h1>CONFIRMÁ TU COMPRA</h1>
+        <FormCheckOut/>
+        <button className="comprarBtn" onClick={CreateOrder}>CONFIRMAR COMPRA</button>
     </div>
 )
 }

@@ -1,0 +1,12 @@
+.inputs{
+    width: 20vw;
+    height: 4vh;
+    margin-bottom: 2vh;
+    font-size: 2.5vh;
+}
+.inputs::placeholder{
+    color: rgba(128, 128, 128, 0.713);
+    font-style: italic;
+
+
+}
