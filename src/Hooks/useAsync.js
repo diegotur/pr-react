@@ -5,27 +5,23 @@ export const useAsync = (asyncFn, dependencies = []) =>{
     const [error, setError] = useState()
     const [loading, setLoading] = useState(true)
 
-    if (!array.isArray(dependencies)){
+    if (!Array.isArray(dependencies)){
         dependencies = []
     }
-   
 
     useEffect(() => {
         setLoading(true)
 
-        asyncFn(collectionRef).then(data => {
-            const productsAdapted = response.docs.map(doc => {
-                const data = doc.data()
-                return {id: doc.id, ...data }
-            })
-            setData(productsAdapted)
-            
-        }).catch(error => {
+        asyncFn().then(data => {
+            setData(data)
+        })
+        .catch(error => {
             setError(error)
-        }).finally(() => {
+        })
+        .finally(() => {
             setLoading(false)
         })  
-    }, [dependencies])
+    }, dependencies) //eslint-disable-line
 
 
     return {
