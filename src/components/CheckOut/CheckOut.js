@@ -17,23 +17,25 @@ const CheckOut=()=>{
 
     const navigate = useNavigate ()
 
+  
     const CreateOrder= async ()=>{
+        
+    setLoading(true)
 
-        setLoading(true)
+    try{
+        
 
-        try{
-
-            const objOrder = {
-                buyer: {
-                    name: {name},
-                    address: {address},
-                    phone: {phone},
-                    mail: {email}   
-                },
-                items: cart,
-                total
-            }
-            
+        const objOrder = {
+            buyer: {
+                name: {name},
+                address: {address},
+                phone: {phone},
+                mail: {email}   
+            },
+            items: cart,
+            total
+        }
+        
     const batch = writeBatch(db)
 
     const outOfStock = []
@@ -59,20 +61,23 @@ const CheckOut=()=>{
         }
     })
     if (outOfStock.length === 0){
+
+       
+
         await batch.commit()
-
+        
         const orderRef = collection(db, 'orders')
-
+        
         const orderAdded = await addDoc(orderRef, objOrder)
-
+        
         console.log(`el Id de su orden es: ${orderAdded.id}`)
-
+        
         clearCart()
-
+        
         setTimeout(()=>{
             navigate ('/')
         }, 3000)
-
+            
     } else{
         console.log(`Hay productos fuera de stock`)
     }
@@ -80,9 +85,11 @@ const CheckOut=()=>{
     } catch(error){
         console.log(error)
     } finally {
-        setLoading(false)
+            setLoading(false)
+
     }
 }
+
 
 if (loading){
     return <h1>Se está generando su orden</h1>
