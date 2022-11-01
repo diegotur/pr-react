@@ -23,16 +23,19 @@ const CheckOut=()=>{
 
         try{
 
-            const objOrder = {
-                buyer: {
-                    name: {name},
-                    address: {address},
-                    phone: {phone},
-                    mail: {email}   
-                },
-                items: cart,
-                total
-            }
+           
+
+                const objOrder = {
+                    buyer: {
+                        name: {name},
+                        address: {address},
+                        phone: {phone},
+                        mail: {email}   
+                    },
+                    items: cart,
+                    total
+                }
+           
             
     const batch = writeBatch(db)
 
@@ -58,7 +61,15 @@ const CheckOut=()=>{
             outOfStock.push({id: doc.id, ...dataDoc})
         }
     })
-    if (outOfStock.length === 0){
+    if (outOfStock.length !== 0){
+        console.log(`Hay productos fuera de stock`)
+
+    }else if (!name || !phone || !email || !address)
+        {
+        alert(`faltan rellenar campos`)
+        
+    }
+    else{
         await batch.commit()
 
         const orderRef = collection(db, 'orders')
@@ -72,9 +83,6 @@ const CheckOut=()=>{
         setTimeout(()=>{
             navigate ('/')
         }, 3000)
-
-    } else{
-        console.log(`Hay productos fuera de stock`)
     }
 
     } catch(error){
@@ -93,13 +101,13 @@ return (
         <h1>CONFIRMÁ TU COMPRA</h1>
         <form>
             <div className='divLabel'>
-                <input className="inputs" type="text" name="Nombre" placeholder="Nombre y Apellido" value={name}onChange={(e) => setName(e.target.value)}></input> 
+                <input className="inputs" type="text" name="nombre" placeholder="Nombre y Apellido" value={name}onChange={(e) => setName(e.target.value)}></input> 
             </div>
             <div className='divLabel'>
-                <input className="inputs" type="email" name="mail" placeholder="Dirección" value={address}onChange={(e) => setAddress(e.target.value)}></input>
+                <input className="inputs" type="text" name="address" placeholder="Dirección" value={address}onChange={(e) => setAddress(e.target.value)}></input>
             </div>
             <div className='divLabel'>
-                <input className="inputs" type="tel" name="Telefono" placeholder="Teléfono" value={phone}onChange={(e) => setPhone(e.target.value)}></input>
+                <input className="inputs" type="tel" name="phone" placeholder="Teléfono" value={phone}onChange={(e) => setPhone(e.target.value)}></input>
             </div>    
             <div className='divLabel'>
                 <input className="inputs" type="email" name="mail" placeholder="E-mail" value={email}onChange={(e) => setEmail(e.target.value)}></input>
