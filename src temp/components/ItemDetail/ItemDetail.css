@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
-
 .Card{
     height: 82vh;
     width: 100%;
@@ -76,7 +74,7 @@
     height: 30vw;
 }
 .ButtonF{
-    background-color: rgba(250, 249, 249, 0.121);
+    background-color: transparent;
     color: rgba(255, 255, 255, 0.747);
     filter: drop-shadow(2px 2px 1px rgb(25, 5, 5));
     font-family: fantasy;
@@ -95,30 +93,4 @@
 .stock{
     font-size: 5vh;
     margin-top: 10vh;
-}
-.toastStyle{
-    position: relative;
-    margin-top:15vh;
-    background-color: rgba(0, 0, 0, 0.121)!important;
-    font-size: 2.5vh;
-    font-family: fantasy!important;
-    color: rgba(255, 255, 255, 0.747)!important;
-    filter: drop-shadow(2px 2px 1px rgb(25, 5, 5));
-    border: ridge rgba(0, 0, 0, 0.641);
-    font-size: 1.3vw;
-    width:90%;
-}
-.character{
-    color: green;
-    font-size: 1.5vw;
-
-
-}
-.nameCh{
-margin-top: 0.5vw;
-padding: 1vh;
-color: black;
-font-size: 1.8vw;
-background-color: rgba(255, 255, 255, 0.457);
-
 }

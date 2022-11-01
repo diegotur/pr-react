@@ -1,21 +1,22 @@
 import './CheckOut.css'
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
-import { FormContext } from '../Form/Form'
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
 import { useNavigate } from "react-router-dom"
-import ClientForm from '../Form/Form'
-
 
 const CheckOut=()=>{
     const {cart, total, clearCart} = useContext(CartContext)
 
-    const {declaredName, declaredAddress, declaredPhone, declaredEmail} = useContext(FormContext)
-
     const [loading, setLoading] = useState(false)
 
+    const [name, setName] = useState("");
+    const [address, setAddress] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+
     const navigate = useNavigate ()
+
   
     const CreateOrder= async ()=>{
         
@@ -26,10 +27,10 @@ const CheckOut=()=>{
 
         const objOrder = {
             buyer: {
-                name: {declaredName},
-                address: {declaredAddress},
-                phone: {declaredPhone},
-                mail: {declaredEmail}   
+                name: {name},
+                address: {address},
+                phone: {phone},
+                mail: {email}   
             },
             items: cart,
             total
@@ -59,11 +60,10 @@ const CheckOut=()=>{
             outOfStock.push({id: doc.id, ...dataDoc})
         }
     })
-    if (outOfStock.length !== 0){
+    if (outOfStock.length === 0){
 
-        console.log(`Hay productos fuera de stock`)
-            
-}else{
+       
+
         await batch.commit()
         
         const orderRef = collection(db, 'orders')
@@ -77,6 +77,9 @@ const CheckOut=()=>{
         setTimeout(()=>{
             navigate ('/')
         }, 3000)
+            
+    } else{
+        console.log(`Hay productos fuera de stock`)
     }
 
     } catch(error){
@@ -95,11 +98,23 @@ if (loading){
 return (
     <div>
         <h1>CONFIRMÁ TU COMPRA</h1>
-        <ClientForm/>
+        <form>
+            <div className='divLabel'>
+                <input className="inputs" type="text" name="Nombre" placeholder="Nombre y Apellido" value={name}onChange={(e) => setName(e.target.value)}></input> 
+            </div>
+            <div className='divLabel'>
+                <input className="inputs" type="email" name="mail" placeholder="Dirección" value={address}onChange={(e) => setAddress(e.target.value)}></input>
+            </div>
+            <div className='divLabel'>
+                <input className="inputs" type="tel" name="Telefono" placeholder="Teléfono" value={phone}onChange={(e) => setPhone(e.target.value)}></input>
+            </div>    
+            <div className='divLabel'>
+                <input className="inputs" type="email" name="mail" placeholder="E-mail" value={email}onChange={(e) => setEmail(e.target.value)}></input>
+            </div>
+        </form>
         <button className="comprarBtn" onClick={CreateOrder}>CONFIRMAR COMPRA</button>
     </div>
 )
 }
-
 export default CheckOut
 
