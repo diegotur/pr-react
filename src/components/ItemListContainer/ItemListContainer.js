@@ -13,8 +13,6 @@ const ItemListContainer = () => {
 
     const {data: products, error, loading} = useAsync(getProductsFromFirestore, [categoryId])
 
-    console.log(products)
-
     if (error){
         <h1>Hubo Un error</h1>
     }

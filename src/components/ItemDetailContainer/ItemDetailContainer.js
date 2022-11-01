@@ -10,9 +10,6 @@ const ItemDetailContainer = ()=>{
 
     const { productId } = useParams()
 
-    console.log(productId)
-
-    
     const getProductsFromFirestore = ()=> getProductById(productId)
     
     const {data:products, error, loading} = useAsync(getProductsFromFirestore, [productId])

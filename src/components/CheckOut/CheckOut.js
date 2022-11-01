@@ -17,9 +17,13 @@ const CheckOut=()=>{
 
     const navigate = useNavigate ()
 
+  
     const CreateOrder= async ()=>{
+        
+    setLoading(true)
 
-        setLoading(true)
+    try{
+        
 
         try{
 
@@ -71,15 +75,15 @@ const CheckOut=()=>{
     }
     else{
         await batch.commit()
-
+        
         const orderRef = collection(db, 'orders')
-
+        
         const orderAdded = await addDoc(orderRef, objOrder)
-
+        
         console.log(`el Id de su orden es: ${orderAdded.id}`)
-
+        
         clearCart()
-
+        
         setTimeout(()=>{
             navigate ('/')
         }, 3000)
@@ -88,9 +92,11 @@ const CheckOut=()=>{
     } catch(error){
         console.log(error)
     } finally {
-        setLoading(false)
+            setLoading(false)
+
     }
 }
+
 
 if (loading){
     return <h1>Se está generando su orden</h1>
