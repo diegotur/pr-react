@@ -20,15 +20,16 @@ margin-top: 1.5vh;
 .InfoList{
   display: flex;
   position: relative;
-  font-size: 7vh;
-  margin-left: 30vh;
-  transform: rotate(-10deg);
+  font-size: 9vh;
+  margin-left: 14vh;
+  transform: rotate(-8deg);
   color: white;
   margin-top: -28vh;
-  width: 10vw;
+  width: 14vw;
   justify-content: center;
-  background-color: rgba(255, 0, 0, 0.672);
-  border: double black 7px;
+  background-color: rgba(9, 4, 1, 0.445);
+  border: double white 3px;
+
   filter: drop-shadow(0px -2px 20px rgba(1, 0, 0, 0.947));
 }
 .ItemFooterList{
@@ -43,7 +44,7 @@ margin-top: 1.5vh;
   }
   .Link{
     text-decoration: none;
-    color: rgb(36, 3, 3);
+    color: rgb(3, 23, 36);
     font-size: 6vh;
     width: 100%;
     border: none;

@@ -8,6 +8,10 @@ import { getProductById } from '../../services/firestore/products'
 
 const ItemDetailContainer = ()=>{
 
+    /* const [products, setProduct] = useState()
+    const [loading, setLoading] = useState(true) */
+
+
     const { productId } = useParams()
 
     const getProductsFromFirestore = ()=> getProductById(productId)

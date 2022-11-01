@@ -9,8 +9,7 @@ export const createAdaptedProductFromFirestore = (doc) => {
         category: data.category,
         description: data.description,
         background: data.background,
-        stock: data.stock,
-        character: data.character
+        stock: data.stock
     }
 
 
