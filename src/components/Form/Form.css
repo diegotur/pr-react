@@ -1,0 +1,88 @@
+.inputs{
+    width: 25vw;
+    height: 4vh;
+    margin-bottom: 2vh;
+    font-size: 2.5vh;
+    margin-left: 2vh;
+    z-index: 10;
+}
+.inputs::placeholder{
+    color: rgba(128, 128, 128, 0.713);
+    font-style: italic;
+}
+.divLabel{
+    background-color: antiquewhite;
+    width: 97%;
+    height: 4vh;
+    padding: 3vh;
+    border-radius: 3%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance:none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+.alertMail{
+    position: relative;
+    color: red;
+    padding:0!important;
+    border: 1px solid black!important;
+    background: none!important;
+    background-color: antiquewhite!important;
+    margin-top: 58.5vh;
+    margin-left: -30vh;
+    margin-right: 30vh;
+    font-size: 1.8vh;
+    z-index: 1!important;
+}
+.alertName{
+    position: relative;
+    color: red;
+    padding:0!important;
+    border: 1px solid black!important;
+    background: none!important;
+    background-color: antiquewhite!important;
+    margin-top: 23.5vh;
+    margin-left: -30vh;
+    margin-right: 30vh;
+    font-size: 1.8vh;
+}
+.alertAddress{
+    position: relative;
+    color: red;
+    padding:0!important;
+    border: 1px solid black!important;
+    background: none!important;
+    background-color: antiquewhite!important;
+    margin-top: 33.5vh;
+    margin-left: -30vh;
+    margin-right: 30vh;
+    font-size: 1.8vh;
+}
+.alertPhone{
+    position: relative;
+    color: red;
+    padding:0!important;
+    border: 1px solid red!important;
+    background: none!important;
+    background-color: antiquewhite!important;
+    margin-top: 43.5vh;
+    margin-left: -30vh;
+    margin-right: 30vh;
+    font-size: 1.8vh;
+}
+.Toastify__close-button {
+    visibility: hidden;
+}
+.submitBtn{
+    background-color: white!important;
+    font-size: 2.8vh;
+    padding: 1vh;
+    font-style: italic;
+    border-radius: 3%;
+    color: grey;
+    border: grey 1px solid;
+
+
+}

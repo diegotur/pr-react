@@ -1,21 +1,3 @@
-.inputs{
-    width: 25vw;
-    height: 4vh;
-    margin-bottom: 2vh;
-    font-size: 2.5vh;
-    margin-left: 2vh;
-}
-.inputs::placeholder{
-    color: rgba(128, 128, 128, 0.713);
-    font-style: italic;
-}
-.divLabel{
-    background-color: rgba(250, 235, 215, 0.576);
-    width: 97%;
-    height: 4vh;
-    padding: 3vh;
-    border-radius: 3%;
-}
 .comprarBtn{
     background: green;
     text-decoration: none;
@@ -25,7 +7,6 @@
     cursor: pointer;
     font-size: 3vh;
     padding: 2vh;
-    margin-top: 5vw;
-    margin-left: 3vh;
+    margin-top: 1vw;
 
 }
