@@ -22,7 +22,7 @@ return (
         <button onClick={() => clearCart()} className="vaciarCarritoBtn">VACIAR CARRITO</button>
         </div>
         <div className='divLink'>
-        <Link to='/checkout' className='confirmBtn'>Confirmar Compra</Link>
+        <Link to='/checkout' className='confirmBtn'>Completá tus datos</Link>
         </div>
     </div>
 )

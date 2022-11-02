@@ -1,39 +1,48 @@
 import './CheckOut.css'
+
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
-import { FormContext } from '../Form/Form'
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
 import { useNavigate } from "react-router-dom"
+import { FormContext} from '../Form/Form'
 import ClientForm from '../Form/Form'
 
 
 const CheckOut=()=>{
+
     const {cart, total, clearCart} = useContext(CartContext)
+
+    const [personalData, setPersonalData] = useState(false)
+
+    const [loading, setLoading] = useState(false)
+    
+    const navigate = useNavigate ()
+    
+    const DataCompleted = () =>{
+        setPersonalData(true)
+    }
 
     const {declaredName, declaredAddress, declaredPhone, declaredEmail} = useContext(FormContext)
 
-    const [loading, setLoading] = useState(false)
-
-    const navigate = useNavigate ()
-  
+    
     const CreateOrder= async ()=>{
         
-    setLoading(true)
-
-    try{
+        setLoading(true)
         
-
-        const objOrder = {
-            buyer: {
-                name: {declaredName},
-                address: {declaredAddress},
-                phone: {declaredPhone},
-                mail: {declaredEmail}   
-            },
-            items: cart,
-            total
-        }
+        try{
+            
+            const objOrder = {
+                buyer: {
+                    name: declaredName,
+                    address: declaredAddress,
+                    phone: declaredPhone,
+                    mail: declaredEmail   
+                },
+                items: cart,
+                total
+            }
+            console.log(objOrder)
         
     const batch = writeBatch(db)
 
@@ -94,9 +103,10 @@ if (loading){
 
 return (
     <div>
-        <h1>CONFIRMÁ TU COMPRA</h1>
-        <ClientForm/>
-        <button className="comprarBtn" onClick={CreateOrder}>CONFIRMAR COMPRA</button>
+        <h1>COMPLETÁ TUS DATOS</h1>
+        <ClientForm DataCompleted={DataCompleted}/>
+            { personalData?<button className="comprarBtn" type="submit" onClick={CreateOrder}>CONFIRMAR COMPRA</button>
+        : ""}
     </div>
 )
 }
