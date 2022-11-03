@@ -1,7 +1,7 @@
 import './CartItem.css'
 import { useContext } from 'react'
 import { CartContext } from '../../CartContext/CartContext'
-import { ToastContainer, toast, Zoom } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 
 
@@ -11,34 +11,37 @@ import 'react-toastify/dist/ReactToastify.css';
     const CartItem = ({ id, name, img, quantity, price }) => {
         const { removeItem } = useContext(CartContext)
 
-        /* const dismissAll = () =>  toast.dismiss();
+        const dismissAll = () =>  toast.dismiss();
 
-        const dismissAll2 = () =>  toast.dismiss();;
+                
+        const dismissAll2 = () =>  {
+            toast.dismiss()
+            removeItem(id);
+        }
 
             const removeAlertContent = () => (
             <div>
-              <button onClick={dismissAll}>Cancelar</button>
-              <button onClick={dismissAll2}>Aceptar</button>
+                <h2>Estás Seguro?</h2>
+                <button onClick={dismissAll}>Cancelar</button>
+                <button onClick={dismissAll2}>Aceptar</button>
             </div>
-          ) */
-          
-          
-          /* const removeAlert = () => toast(removeAlertContent, {
-              position: "top-right",
-              autoClose: false,
-              hideProgressBar: true,
-              closeOnClick: false,
-              pauseOnHover: true,
-              transition: Zoom,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-              className:"removeAlert",
-            });
-             */
-            const handleRemove = (id) => {
-                /* removeAlert() */
-                removeItem(id)
+            ) 
+            
+            
+            const removeAlert = () => toast(removeAlertContent, {
+                position: "bottom-right",
+                autoClose: false,
+                hideProgressBar: true,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                className:"removeAlert",
+                });
+                
+            const handleRemove = () => {
+                removeAlert() 
             }
 
     return (
@@ -63,7 +66,7 @@ import 'react-toastify/dist/ReactToastify.css';
                 </p>
                 <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Quitar</button>
             </footer>
-            <ToastContainer/>
+            <ToastContainer limit={1}/>
         </article>
     )
 }
