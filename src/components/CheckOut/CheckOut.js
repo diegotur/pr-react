@@ -5,7 +5,6 @@ import { CartContext } from "../../CartContext/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
 import { useNavigate } from "react-router-dom"
-import { FormContext} from '../Form/Form'
 import ClientForm from '../Form/Form'
 
 
@@ -15,15 +14,19 @@ const CheckOut=()=>{
 
     const [personalData, setPersonalData] = useState(false)
 
+    const [orderData, setOrderData] = useState()
+        
+
+const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEmail) =>{
+    setOrderData({declaredName, declaredAddress, declaredPhone, declaredEmail})
+    setPersonalData(true)
+}
+
     const [loading, setLoading] = useState(false)
     
     const navigate = useNavigate ()
-    
-    const DataCompleted = () =>{
-        setPersonalData(true)
-    }
+  
 
-    const {declaredName, declaredAddress, declaredPhone, declaredEmail} = useContext(FormContext)
 
     
     const CreateOrder= async ()=>{
@@ -33,12 +36,7 @@ const CheckOut=()=>{
         try{
             
             const objOrder = {
-                buyer: {
-                    name: declaredName,
-                    address: declaredAddress,
-                    phone: declaredPhone,
-                    mail: declaredEmail   
-                },
+                buyer: orderData,
                 items: cart,
                 total
             }
@@ -102,6 +100,7 @@ if (loading){
 }
 
 return (
+
     <div>
         <h1>COMPLETÁ TUS DATOS</h1>
         <ClientForm DataCompleted={DataCompleted}/>

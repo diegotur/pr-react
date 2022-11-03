@@ -1,17 +1,8 @@
 import { Form, Button } from 'react-bootstrap';
-import { useState, createContext} from "react"
+import { useState} from "react"
 import './Form.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-export const FormContext = createContext({
-    declaredName:"",
-    declaredAddress:"",
-    declaredPhone:"",
-    declaredEmail:""
-
-})
 
 
 const ClientForm = ({DataCompleted}) => {
@@ -37,7 +28,9 @@ const ClientForm = ({DataCompleted}) => {
         else if (declaredEmail !== declaredEmail2 || !declaredEmail ||!declaredEmail2){
             alertFn("Los correos electrónicos deben coincidir", "alertMail")
         } else{
-            DataCompleted()
+            DataCompleted(
+                declaredName, declaredAddress, declaredPhone, declaredEmail
+            )
         }
 
         
