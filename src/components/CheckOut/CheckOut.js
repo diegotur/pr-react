@@ -18,7 +18,9 @@ const CheckOut=()=>{
         
 
 const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEmail) =>{
+
     setOrderData({declaredName, declaredAddress, declaredPhone, declaredEmail})
+    
     setPersonalData(true)
 }
 

@@ -1,7 +1,7 @@
 import { Form, Button } from 'react-bootstrap';
 import { useState} from "react"
 import './Form.css'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -60,7 +60,7 @@ return(
         <Form.Group className="divLabel" controlId="form.Name">
             <Form.Label></Form.Label>
             <Form.Control type="email" className="inputs" value={declaredEmail2} onChange={(e) => setEmail2(e.target.value)} placeholder="Reingresa Correo Electrónico" />
-            <ToastContainer/>
+            <ToastContainer limit={1}/>
         </Form.Group>
          <div className="divLabel">
         <Button className="submitBtn"type='submit'>Confirmar Datos</Button>
@@ -71,10 +71,11 @@ return(
 
 const alertFn = (a, b) => toast(a, {
     position: "top-right",
-    autoClose: 2000,
+    autoClose: false,
     hideProgressBar: true,
     closeOnClick: false,
     pauseOnHover: true,
+    transition: Zoom,
     draggable: true,
     progress: undefined,
     theme: "light",

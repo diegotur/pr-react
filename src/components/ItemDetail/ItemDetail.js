@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import { useContext } from 'react'
 import { CartContext } from '../../CartContext/CartContext'
 import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -32,13 +32,14 @@ const ItemDetail = ({ id, name, img, category, background, description, characte
         </div>
       )
     const notify = () => toast(Msg, {
-        position: "top-right",
+        position: "top-left",
         autoClose: 4000,
         hideProgressBar: true,
         closeOnClick: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
+        transition: Zoom,
         theme: "light",
         className:"toastStyle"
         });
