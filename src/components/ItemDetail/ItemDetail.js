@@ -50,9 +50,8 @@ const ItemDetail = ({ id, name, img, category, background, description, characte
 
         notify()
 
-        const productToAdd = {
-            id, name, img, price, quantity
-        }
+        const productToAdd = {id, name, img, price, quantity}
+            
         addItem(productToAdd)
         
     }

@@ -71,7 +71,7 @@ return(
 
 const alertFn = (a, b) => toast(a, {
     position: "top-right",
-    autoClose: false,
+    autoClose: 2000,
     hideProgressBar: true,
     closeOnClick: false,
     pauseOnHover: true,

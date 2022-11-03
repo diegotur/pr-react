@@ -1,14 +1,45 @@
 import './CartItem.css'
 import { useContext } from 'react'
-import { CartContext } from '../../CartContext/CartContext' 
+import { CartContext } from '../../CartContext/CartContext'
+import { ToastContainer, toast, Zoom } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 
-const CartItem = ({ id, name, img, quantity, price }) => {
-    const { removeItem } = useContext(CartContext)
 
-    const handleRemove = (id) => {
-        removeItem(id)
-    }
+
+    
+    const CartItem = ({ id, name, img, quantity, price }) => {
+        const { removeItem } = useContext(CartContext)
+
+        /* const dismissAll = () =>  toast.dismiss();
+
+        const dismissAll2 = () =>  toast.dismiss();;
+
+            const removeAlertContent = () => (
+            <div>
+              <button onClick={dismissAll}>Cancelar</button>
+              <button onClick={dismissAll2}>Aceptar</button>
+            </div>
+          ) */
+          
+          
+          /* const removeAlert = () => toast(removeAlertContent, {
+              position: "top-right",
+              autoClose: false,
+              hideProgressBar: true,
+              closeOnClick: false,
+              pauseOnHover: true,
+              transition: Zoom,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              className:"removeAlert",
+            });
+             */
+            const handleRemove = (id) => {
+                /* removeAlert() */
+                removeItem(id)
+            }
 
     return (
         <article className='CardCartItem'>
@@ -32,6 +63,7 @@ const CartItem = ({ id, name, img, quantity, price }) => {
                 </p>
                 <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Quitar</button>
             </footer>
+            <ToastContainer/>
         </article>
     )
 }
