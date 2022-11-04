@@ -28,10 +28,17 @@
     cursor: pointer;
     font-size: 4vh;
     padding: 3vh;
-   
-
-    
 }
 .divLink{
     margin-top: 10vh;
+}
+.removeAlert{
+    width: auto;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    font-size: 2vh;
 }

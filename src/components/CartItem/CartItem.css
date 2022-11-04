@@ -65,15 +65,11 @@
 }
 .removeAlert{
     width: auto;
-    height: 60%;
-    background: rgba(240, 69, 22, 0.607);
-    border-bottom-left-radius: 30%;
-    border-top-left-radius: 30%;
+    background: white;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
-    font-size: 2.8vh;
-    margin-top: -140%;
-    margin-right: -2.5vh;
+    color: red;
+    border: 1px solid red;
+    font-size: 2vh;
 }

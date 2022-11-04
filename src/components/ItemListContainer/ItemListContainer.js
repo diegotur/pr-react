@@ -4,6 +4,17 @@ import { useParams } from 'react-router-dom'
 import { DotSpinner } from '@uiball/loaders'
 import { useAsync } from '../../Hooks/useAsync'
 import { getProducts } from '../../services/firestore/products'
+import Swal from "sweetalert2";
+
+Swal.fire({
+    title: "COMPRA REALIZADA CON ÉXITO",
+    text:`Enviamos el código de compra a  `,
+    icon: false,
+    buttons: true,
+    dangerMode: true,
+    customClass:"swAlert"
+
+})
 
 const ItemListContainer = () => {
 

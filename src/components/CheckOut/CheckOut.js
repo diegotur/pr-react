@@ -1,11 +1,11 @@
 import './CheckOut.css'
-
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { addDoc, collection, getDocs, query, where, documentId, writeBatch } from "firebase/firestore"
 import { db } from "../../services/firebase"
 import { useNavigate } from "react-router-dom"
 import ClientForm from '../Form/Form'
+import Swal from "sweetalert2";
 
 
 const CheckOut=()=>{
@@ -42,7 +42,6 @@ const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEma
                 items: cart,
                 total
             }
-            console.log(objOrder)
         
     const batch = writeBatch(db)
 
@@ -79,8 +78,15 @@ const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEma
         
         const orderAdded = await addDoc(orderRef, objOrder)
         
-        console.log(`el Id de su orden es: ${orderAdded.id}`)
+        Swal.fire({
+            title: "Gracias por su compra",
+            text:`El id de su orden es: ${orderAdded.id}`,
+            icon: "success",
+            buttons: true,
+            dangerMode: true,
+            className:"swAlert"
         
+        })
         clearCart()
         
         setTimeout(()=>{
@@ -113,4 +119,3 @@ return (
 }
 
 export default CheckOut
-
