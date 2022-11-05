@@ -1,30 +1,27 @@
 import './CartItem.css'
 import { useContext } from 'react'
 import { CartContext } from '../../CartContext/CartContext'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; 
+import Swal from "sweetalert2"
+
+ 
 
     const CartItem = ({ id, name, img, quantity, price }) => {
         const { removeItem } = useContext(CartContext)
 
-    const removeAlert = () => toast("Item eliminado del carrito.", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        className:"removeAlert",
-            });
-            
-        const handleRemove = (id) => {
-            removeAlert() 
-            removeItem(id);
+        const handleRemove=()=>{
+            removeItem(id)
 
+            Swal.fire({
+                title: `${name}`,
+                text:`Eliminado del carrito`,
+                icon: true,
+                buttons: true,
+                dangerMode: true,
+                timer:3000,
+                customClass:"removeAlert"
+
+            })
         }
-
     return (
         <article className='CardCartItem'>
             <header className="HeaderCartItem">
@@ -45,9 +42,8 @@ import 'react-toastify/dist/ReactToastify.css';
                 <p className="InfoCartItem">
                     Subtotal: ${price * quantity}
                 </p>
-                <button className='ButtonCartItem' onClick={() => handleRemove(id)}>Quitar</button>
+                <button className='ButtonCartItem' onClick={() => handleRemove()}>Quitar</button>
             </footer>
-            <ToastContainer limit={1}/>
         </article>
     )
 }

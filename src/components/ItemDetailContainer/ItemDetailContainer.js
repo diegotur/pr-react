@@ -1,6 +1,6 @@
 import "./ItemDetailContainer.css"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { DotSpinner } from '@uiball/loaders'
 import { useAsync } from '../../Hooks/useAsync'
 import { getProductById } from '../../services/firestore/products'
@@ -9,6 +9,8 @@ import { getProductById } from '../../services/firestore/products'
 const ItemDetailContainer = ()=>{
 
     const { productId } = useParams()
+
+    const navigate = useNavigate()
 
     const getProductsFromFirestore = ()=> getProductById(productId)
     
@@ -29,6 +31,7 @@ const ItemDetailContainer = ()=>{
     return(
         <div className="ItemDetailContainer">
             <ItemDetail {...products } />
+            <button onClick={()=> navigate(-1)} className="ButtonV">VOLVER</button>
         </div>
     )
 }

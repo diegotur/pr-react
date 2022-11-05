@@ -6,3 +6,17 @@
     justify-items: center;
     margin-top:15%;
 }
+.ButtonV{
+    background-color: transparent;
+    color: rgba(245, 245, 245, 0.906);
+    font-size: 2.5vw;
+    letter-spacing: 0.3vh;
+    justify-self: end;
+    position: absolute;
+    margin-top: -6vh;
+    margin-left: 80vh;
+    border: none;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}

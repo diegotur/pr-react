@@ -1,14 +1,8 @@
 import './ItemCount.css'
 import { useState } from 'react'
-import { Link, useNavigate } from "react-router-dom"
-
-
 
 const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
-    
-    const navigate = useNavigate()
-    
-    
+
     const [quantity, setQuantity] = useState(initial)
 
     const increment = () => {
@@ -32,12 +26,10 @@ return(
                 <button className="ButtonC" onClick={increment}>+</button>
             </div>
             <div className='GridButtons'>
-                <button className="ButtonA"  onClick={() => onAdd(quantity)}  >AGREGAR AL CARRITO</button>
-                
-                {/* <Link to={(navigate(-1))} className="ButtonV">VOLVER</Link> */}
+                <button className="ButtonA"  onClick={() => 
+                    onAdd(quantity)}  >AGREGAR AL CARRITO</button>
             </div>
     </div>
 )
-
 }
 export default ItemCount

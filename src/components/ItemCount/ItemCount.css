@@ -25,30 +25,20 @@
     font-size: 3vw;
 }
 .ButtonA{
-    background-color: rgba(250, 249, 249, 0.121);
+    background-color: transparent;
     color: rgba(255, 255, 255, 0.747);
     filter: drop-shadow(2px 2px 1px rgb(25, 5, 5));
     font-family: fantasy;
     border: ridge rgba(0, 0, 0, 0.641);
     letter-spacing: 0.3vh;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     cursor: pointer;
     height: 6.5vh;
 
 }
-.ButtonV{
-    background-color: transparent;
-    color: rgba(245, 245, 245, 0.906);
-    font-size: 2.5vw;
-    letter-spacing: 0.3vh;
-    justify-self: end;
-    position: relative;
-    border: none;
-    text-decoration: none;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    cursor: pointer;
-}
+
 .GridButtons{
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15vh;
 }
