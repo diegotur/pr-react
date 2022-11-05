@@ -8,5 +8,18 @@
     font-size: 3vh;
     padding: 2vh;
     margin-top: 1vw;
-
+}
+.swAlert{
+    position: relative!important;
+    background-color: white!important;
+    color: black!important;
+    font-size: 1vw!important;
+    width: 40%!important;
+    border-radius: 3%!important;
+    height: 50%!important;
+    padding: 0!important;
+}
+.swal2-styled.swal2-confirm {
+    position: absolute!important;
+    margin-top: -500vh!important;
 }

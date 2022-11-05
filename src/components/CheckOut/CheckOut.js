@@ -6,6 +6,7 @@ import { db } from "../../services/firebase"
 import { useNavigate } from "react-router-dom"
 import ClientForm from '../Form/Form'
 import Swal from "sweetalert2";
+import { DotSpinner } from '@uiball/loaders'
 
 
 const CheckOut=()=>{
@@ -69,7 +70,17 @@ const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEma
     })
     if (outOfStock.length !== 0){
 
-        console.log(`Hay productos fuera de stock`)
+        Swal.fire({
+            title:"ERROR",
+            text:`Uno de los productos seleccionados ya no está en stock`,
+            icon: false,
+            buttons: true,
+            dangerMode: true,
+            timer:6000,
+            customClass:"swAlert"
+        })
+        navigate ('/cart')
+
             
 }else{
         await batch.commit()
@@ -79,19 +90,20 @@ const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEma
         const orderAdded = await addDoc(orderRef, objOrder)
         
         Swal.fire({
-            title: "Gracias por su compra",
-            text:`El id de su orden es: ${orderAdded.id}`,
-            icon: "success",
+            title:"COMPRA REALIZADA CON ÉXITO",
+            text:`Enviamos el código de compra ${orderAdded.id} 
+            a 
+            "${orderData.declaredEmail}"`,
+            icon: false,
             buttons: true,
             dangerMode: true,
-            className:"swAlert"
-        
+            timer:6000,
+            customClass:"swAlert"
         })
         clearCart()
         
-        setTimeout(()=>{
-            navigate ('/')
-        }, 3000)
+        navigate ('/')
+    
     }
 
     } catch(error){
@@ -104,7 +116,16 @@ const DataCompleted = (declaredName, declaredAddress, declaredPhone, declaredEma
 
 
 if (loading){
-    return <h1>Se está generando su orden</h1>
+
+    return (
+        <div>
+    <div className="DotSpinner"><DotSpinner
+        size={80}
+        speed={0.9} 
+        color="black" 
+        /></div><h1>Chequeando stock...</h1>
+        </div>
+    )
 }
 
 return (

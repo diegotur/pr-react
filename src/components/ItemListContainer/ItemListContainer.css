@@ -5,13 +5,4 @@
     flex-wrap: wrap;
     padding-bottom: 8vh;
 }
-.swAlert{
-    position: relative!important;
-    background-color: rgba(0, 0, 0, 0.211)!important;
-    font-size: 2.5vh!important;
-    font-family: fantasy!important;
-    color: rgba(255, 255, 255, 0.747)!important;
-    filter: drop-shadow(2px 2px 1px rgb(25, 5, 5))!important;
-    border: ridge rgba(0, 0, 0, 0.641)!important;
-    font-size: 1.3vw!important;
-}
+
