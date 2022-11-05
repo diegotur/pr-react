@@ -33,6 +33,7 @@
     letter-spacing: 0.3vh;
     font-size: 1.5vw;
     cursor: pointer;
+    height: 6.5vh;
 
 }
 .ButtonV{
@@ -49,6 +50,5 @@
 }
 .GridButtons{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 15vh;
+    grid-template-rows: 1fr;
 }
