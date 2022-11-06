@@ -1,64 +1,33 @@
-## Proyecto de E-Commerce con [REACTJS] - [CODERHOUSE].
-
-
+## Proyecto de E-Commerce con REACTJS - CODERHOUSE
 
  # _GAME FACTORY_ [![N|Solid](/public/Images/Logo.png)](/public/Images/Logo.png) 
 
-Este sitio web fue creado con React, HTML5, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
+Este sitio web fue creado con ReactJS, Javascript, HTML5, CSS, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
 
-This website is powered by React, HTML5, Firebase and SweetAlert2, Bootstrap y Toastify libraries. 
+# INSTALACIÓN
 
-Cómo se inicializa la app?
-Podés descargar la carpeta del proyecto o bien, clonarla desde la terminal. Para realizar la clonacion del proyecto, ejecutar en la consola: git clone https://github.com/constanzabravi/ProyectoReact
-Instalar NPM usando el comando npm i en la ruta donde se encuentra "package.json" desde la terminal.
-La App se inicia a través de la terminal con el comando npm start, luego de haber instalado las dependencias del node-module correspondiente, que se especifican en el siguiente apartado.
-¿Qué tecnologías y dependencias usé para realizar la app?
-Tecnologías
-HTML CSS JAVASCRIPT FIREBASE REACTJS GIT
+# Clonar repositorio:
 
-Dependencias
-🔹 "@emotion/react": "^11.10.5",
+git clone https://github.com/diegotur/pr-react.git
 
-🔹 "@emotion/styled": "^11.10.5",
+npm install
 
-🔹 "@testing-library/jest-dom": "^5.16.5",
-
-🔹 "@testing-library/react": "^13.4.0",
-
-🔹 "@testing-library/user-event": "^13.5.0",
+# Instalar dependencias:
 
 🔹 "@uiball/loaders": "^1.2.6",
-
-🔹 "animate.css": "^4.1.1",
-
-🔹 "babel-plugin-macros": "^3.1.0",
-
-🔹 "bootstrap": "^5.2.1",
-
 🔹 "firebase": "^9.12.1",
-
 🔹 "react": "^18.2.0",
-
 🔹 "react-bootstrap": "^2.5.0",
-
 🔹 "react-dom": "^18.2.0",
-
-🔹 "react-hook-form": "^7.39.1",
-
 🔹 "react-router-dom": "^6.4.2",
-
 🔹 "react-scripts": "5.0.1",
-
-🔹 "react-toastify": "^9.1.1",
-
+🔹 "react-toastify": "^9.0.8",
 🔹 "sweetalert2": "^11.6.5",
-
-🔹 "sweetalert2-react-content": "^5.0.7",
-
 🔹 "web-vitals": "^2.1.4"
 
-Utilización de Firebase
-Para conectar tu proyecto con firestore, completá tus datos siguiendo el ejemplo de variables de entorno respetando los datos de la colección de productos.
+# FIREBASE
+
+Utilizar el siguiente esquema de variables de entorno:
 
 -REACT_APP_apiKey=
 
@@ -72,50 +41,21 @@ Para conectar tu proyecto con firestore, completá tus datos siguiendo el ejempl
 
 -REACT_APP_appId=
 
-Componentes utilizados
-🔹 NavBar
+# USO DE LIBRERÍAS:
 
-Contiene el logo de la tienda, las categorías y el carrito con los productos agregados y el precio total.
+🔹 Bootstrap - Aplicado en el formulario (Form.js).
 
-🔹 ItemListContainer
+🔹 Toastify - Aplicado al agregar producto al carrito (itemDetail.js), a errores en la validación del formulario (Form.js).
 
-Contiene imagen presentanción, los productos y filtrado por categoría.
+🔹 SweetAlert2 - Aplicado al borrar producto del carrito (CartItem.js), al vaciar carrito (Cart.js) y al confirmar compra realizada o informar faltante de stock (CheckOut.js).
 
-🔹 ItemList
+🔹 @uiball/loaders - Aplicado en las esperas de promesas asíncronas (CheckOut.js, ItemDetailContainer.js e ItemListContainer.js).
 
-Contiene el mapeado de los productos necesarios.
+# EN VERCEL:
 
-🔹 ItemDetailContainer
+Podés ver este proyecto funcionando en https://gamefactory.vercel.app
 
-Contiene el detalle del producto seleccionado.
+//solo optimizado para DESKTOP - Responsividad en construcción//
 
-🔹 ItemDetail
 
-Contiene un detalle mas especifico del producto seleccionado como el nombre, la descripción, el stock, la categoría, permite seleccionar la cantidad del producto para comprar mediante ItemCount, agregarlo al carrito y finalizar la compra.
 
-🔹 Item
-
-Contiene la visualización del producto con sus detalles y un botón de "Ver Detalle" que redirige a ItemDetail.
-
-🔹 Cart
-
-Contiene el resumen de la compra.
-
-🔹 CartWidget
-
-Visualiza la cantidad de productos en el carrito y el precio total.
-
-🔹 Form
-
-Contiene un formulario con nombre y apellido, dirección, numero de teléfono y doble correo electrónico con la finalidad de verificar si coinciden.
-
-🔹 ItemCart
-
-Contiene un detalle de los productos seleccionados en el carrito por separado mas una botón por cada uno para poder los.
-
-🔹 ItemCount
-
-Permite seleccionar la cantidad del producto.
-
-Versionado
-Se utilizó Git para el sistema de versionado. Para seguir sus actualizaciones, se usó y usará [GitHub].
