@@ -6,8 +6,6 @@ import { useAsync } from '../../Hooks/useAsync'
 import { getProducts } from '../../services/firestore/products'
 
 
-
-
 const ItemListContainer = () => {
 
     const { categoryId } = useParams()
@@ -33,6 +31,4 @@ const ItemListContainer = () => {
         </div>
     )
 }
-
-
 export default ItemListContainer

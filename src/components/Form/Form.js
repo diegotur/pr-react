@@ -32,11 +32,6 @@ const ClientForm = ({DataCompleted}) => {
                 declaredName, declaredAddress, declaredPhone, declaredEmail
             )
         }
-
-        
-        /* setId('');
-        setName('');
-        setRole(''); */
     };
 return(
 

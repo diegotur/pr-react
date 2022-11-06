@@ -5,9 +5,6 @@ import { CartContext } from "../../CartContext/CartContext"
 import CartItem from '../CartItem/CartItem'
 import Swal from "sweetalert2"
 
-
-
-
 const Cart = () => {
 
     const {cart, totalQuantity, total, clearCart} = useContext(CartContext)

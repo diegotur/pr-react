@@ -1,32 +1,22 @@
+               
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import logo from './assets/Logo.png'
 import { NavLink } from 'react-router-dom'
-import { getDocs, collection, query, orderBy } from 'firebase/firestore'
 import { useState, useEffect } from 'react'
-import { db } from '../../services/firebase'
-
+import { getProductByCategory } from '../../services/firestore/products'
 
 const Navbar = () => {
 
     const [categories, setCategories] = useState([])
 
-    useEffect(()=>{
-    
-        const collectionRef = query (collection(db, 'categories'), orderBy("order"));
+    useEffect(() => {
 
-        getDocs(collectionRef).then(response =>{
-            const categoriesAdapted = response.docs.map(doc => {
-                const data = doc.data();
-                const id = doc.id
-
-                return {id, ...data}
-            })
-            setCategories(categoriesAdapted)
+        getProductByCategory().then(data => {
+            setCategories(data)
         })
-    },[])
+    }, []) 
 
-    
     return (
         <nav className = "Navbar">
             <div className ="contLeft">
@@ -50,3 +40,5 @@ const Navbar = () => {
     )
 }
 export default Navbar
+    
+   
