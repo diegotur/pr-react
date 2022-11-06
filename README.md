@@ -1,8 +1,8 @@
 ## Proyecto de E-Commerce con [REACTJS] - [CODERHOUSE].
 
-# _GAME FACTORY_
 
-[![N|Solid](/src/components/Navbar/assets/Logo.png)](/src/components/Navbar/assets/Logo.png)
+[![N|Solid](/public/Images/Logo.png)](/public/Images/Logo.png) 
+ # _GAME FACTORY_
 
 Este sitio web fue creado con React, HTML5, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
 
