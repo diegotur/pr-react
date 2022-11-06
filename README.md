@@ -1,16 +1,25 @@
 ## Proyecto de E-Commerce con REACTJS - CODERHOUSE
 
- # _GAME FACTORY_ [![N|Solid](/public/Images/Logo.png)](/public/Images/Logo.png) 
+
+ [![N|Solid](/public/Images/Logo2.png)](/public/Images/Logo2.png)  _GAME FACTORY_ [![N|Solid](/public/Images/Logo2.png)](/public/Images/Logo2.png) 
+
+
 
 Este sitio web fue creado con ReactJS, Javascript, HTML5, CSS, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
 
+
+
 # INSTALACIÓN
 
+
+
 # Clonar repositorio:
+
 
 git clone https://github.com/diegotur/pr-react.git
 
 npm install
+
 
 # Instalar dependencias:
 
@@ -41,17 +50,27 @@ Utilizar el siguiente esquema de variables de entorno:
 
 -REACT_APP_appId=
 
+
+
 # USO DE LIBRERÍAS:
+
+
 
 🔹 Bootstrap - Aplicado en el formulario (Form.js).
 
+
 🔹 Toastify - Aplicado al agregar producto al carrito (itemDetail.js), a errores en la validación del formulario (Form.js).
+
 
 🔹 SweetAlert2 - Aplicado al borrar producto del carrito (CartItem.js), al vaciar carrito (Cart.js) y al confirmar compra realizada o informar faltante de stock (CheckOut.js).
 
+
 🔹 @uiball/loaders - Aplicado en las esperas de promesas asíncronas (CheckOut.js, ItemDetailContainer.js e ItemListContainer.js).
 
-# EN VERCEL:
+
+
+# SITIO WEB:
+
 
 Podés ver este proyecto funcionando en https://gamefactory.vercel.app
 
