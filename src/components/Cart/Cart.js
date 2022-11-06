@@ -37,7 +37,7 @@ const Cart = () => {
         <button onClick={() => handler()} className="vaciarCarritoBtn">VACIAR CARRITO</button>
         </div>
         <div className='divLink'>
-        <Link to='/checkout' className='confirmBtn'>Completá tus datos</Link>
+        <Link to='/checkout' className='confirmBtn'>GENERAR ORDEN DE COMPRA</Link>
         </div>
     </div>
 )
