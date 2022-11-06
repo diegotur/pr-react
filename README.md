@@ -1,7 +1,9 @@
 ## Proyecto de E-Commerce con REACTJS - CODERHOUSE
 
 
- [![N|Solid](/public/Images/Logo2.png)](/public/Images/Logo2.png)  _GAME FACTORY_ [![N|Solid](/public/Images/Logo2.png)](/public/Images/Logo2.png) 
+# _GAME FACTORY_ 
+
+[![N|Solid](/public/Images/Logo2.png)](/public/Images/Logo2.png) 
 
 
 
@@ -41,6 +43,9 @@ npm install
 
 🔹 "sweetalert2": "^11.6.5"
 
+# FUNCIONAMIENTO DE LA APLICACIÓN (DEMO)
+
+![ Alt text](./public/Images/gamefactory.gif)
 
 # FIREBASE
 
