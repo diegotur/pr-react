@@ -1,7 +1,7 @@
 # Diego Mariano Tur 
 ## Proyecto E-Commerce - REACTJS para CODERHOUSE
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PlayStation_4_-_Logo.svg/1280px-PlayStation_4_-_Logo.svg.png)
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PlayStation_4_-_Logo.svg/1280px-PlayStation_4_-_Logo.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/PlayStation_4_-_Logo.svg/1280px-PlayStation_4_-_Logo.svg.png)
 
 Este sitio web fue creado con React, HTML5, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
 
