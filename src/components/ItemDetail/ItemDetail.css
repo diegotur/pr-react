@@ -82,14 +82,14 @@
     font-family: fantasy;
     border: ridge rgba(0, 0, 0, 0.641);
     letter-spacing: 0.3vh;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     text-decoration: none;
     cursor: pointer;
     display: grid;
     position: absolute;
     margin-top: 32vh;
     width: 19.5vw;
-    height: 5.5vh;
+    height: 6.5vh;
     align-items: center;
 }
 .stock{
