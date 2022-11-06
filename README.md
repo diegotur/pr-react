@@ -7,7 +7,7 @@
 
 
 
-Este sitio web fue creado con ReactJS, Javascript, HTML5, CSS, Firebase y las librerias SweetAlert2, Bootstrap y Toastify. 
+Este sitio web fue creado con ReactJS, Javascript, HTML5, CSS, Firebase y las librerias SweetAlert2, Bootstrap, @uiball/loaders y Toastify. 
 
 
 
@@ -21,6 +21,8 @@ Este sitio web fue creado con ReactJS, Javascript, HTML5, CSS, Firebase y las li
 git clone https://github.com/diegotur/pr-react.git
 
 npm install
+
+npm start
 
 
 # Instalar dependencias:
